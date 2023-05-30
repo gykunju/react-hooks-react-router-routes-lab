@@ -8,7 +8,7 @@ function Movies() {
     <div>
       {movies.map((movie, index)=>{
         return(
-          <div>
+          <div key={index}>
           <h3>{movie.title}</h3>
           <ul>
           {movie.genres.map((genre, index)=>{
@@ -18,9 +18,6 @@ function Movies() {
           </div>
         )
       })}
-      <ul>
-        <li>{movies.genres}</li>
-      </ul>
     </div>
     </div>
   )
